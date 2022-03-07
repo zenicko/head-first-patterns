@@ -1,6 +1,6 @@
-package ru.zenicko.pattern3.decorator.condiments;
+package ru.zenicko.patterns.decorator.condiments;
 
-import ru.zenicko.pattern3.decorator.beverages.Beverage;
+import ru.zenicko.patterns.decorator.beverages.Beverage;
 
 public class Mocha extends CondimentDecorator {
 

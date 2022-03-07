@@ -1,4 +1,4 @@
-package ru.zenicko.pattern3.decorator.beverages;
+package ru.zenicko.patterns.decorator.beverages;
 
 public class DarkRoast extends Beverage {
     public DarkRoast() {

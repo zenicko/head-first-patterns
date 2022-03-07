@@ -1,12 +1,12 @@
-package ru.zenicko.pattern3.decorator;
+package ru.zenicko.patterns.decorator;
 
-import ru.zenicko.pattern3.decorator.beverages.Beverage;
-import ru.zenicko.pattern3.decorator.beverages.DarkRoast;
-import ru.zenicko.pattern3.decorator.beverages.Espresso;
-import ru.zenicko.pattern3.decorator.beverages.HouseBlend;
-import ru.zenicko.pattern3.decorator.condiments.Mocha;
-import ru.zenicko.pattern3.decorator.condiments.Soy;
-import ru.zenicko.pattern3.decorator.condiments.Whip;
+import ru.zenicko.patterns.decorator.beverages.Beverage;
+import ru.zenicko.patterns.decorator.beverages.DarkRoast;
+import ru.zenicko.patterns.decorator.beverages.Espresso;
+import ru.zenicko.patterns.decorator.beverages.HouseBlend;
+import ru.zenicko.patterns.decorator.condiments.Mocha;
+import ru.zenicko.patterns.decorator.condiments.Soy;
+import ru.zenicko.patterns.decorator.condiments.Whip;
 
 public class StarbuzzCoffee {
 
