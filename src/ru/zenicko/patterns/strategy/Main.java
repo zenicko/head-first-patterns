@@ -6,13 +6,15 @@ public class Main {
 
         System.out.println("MallardDuck");
         mallardDuck.display();
-        mallardDuck.quack();
+        mallardDuck.performanceQuack();
+        mallardDuck.performanceFly();
         mallardDuck.swim();
 
         System.out.println("RedheadDuck");
         RedheadDuck redheadDuck = new RedheadDuck();
         redheadDuck.display();
-        redheadDuck.quack();
+        redheadDuck.performanceQuack();
+        redheadDuck.performanceFly();
         redheadDuck.swim();
     }
 }
