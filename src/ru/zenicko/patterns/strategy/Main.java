@@ -1,4 +1,4 @@
-package ru.zenicko.patterns.observer.step1;
+package ru.zenicko.patterns.strategy;
 
 public class Main {
     public static void main(String[] args) {

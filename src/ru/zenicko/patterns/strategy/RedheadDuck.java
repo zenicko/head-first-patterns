@@ -1,4 +1,4 @@
-package ru.zenicko.patterns.observer.step1;
+package ru.zenicko.patterns.strategy;
 
 public class RedheadDuck extends Duck {
     void display () {
