@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public abstract class Duck {
-    FlyBehavior flyBehavior;
-    QuackBehavior quackBehavior;
+    protected FlyBehavior flyBehavior;
+    protected QuackBehavior quackBehavior;
 
     public void swim() {
         System.out.println("I'm swimming");
@@ -18,6 +18,13 @@ public abstract class Duck {
     }
     public void performanceFly() {
         flyBehavior.fly();
+    }
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
     }
 
     abstract void display();
