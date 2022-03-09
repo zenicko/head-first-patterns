@@ -1,6 +1,8 @@
 package ru.zenicko.patterns.strategy;
 
+import ru.zenicko.patterns.DuckCall;
 import ru.zenicko.patterns.strategy.behaviors.flies.FlyRocketPowered;
+import ru.zenicko.patterns.strategy.behaviors.quackes.Quack;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,5 +28,13 @@ public class Main {
         decoyDuck.performanceQuack();
         decoyDuck.setFlyBehavior(new FlyRocketPowered());
         decoyDuck.performanceFly();
+
+        System.out.println("the Duck call");
+        DuckCall duckCall = new DuckCall();
+        duckCall.perfomanceQuack();
+        duckCall.setQuackBehavior(new Quack());
+        duckCall.perfomanceQuack();
+
+
     }
 }
