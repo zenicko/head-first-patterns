@@ -1,4 +1,4 @@
-package ru.zenicko.patterns;
+package ru.zenicko.patterns.strategy;
 
 import ru.zenicko.patterns.strategy.behaviors.quackes.MuteQuack;
 import ru.zenicko.patterns.strategy.behaviors.quackes.QuackBehavior;

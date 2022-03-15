@@ -1,6 +1,5 @@
 package ru.zenicko.patterns.strategy;
 
-import ru.zenicko.patterns.DuckCall;
 import ru.zenicko.patterns.strategy.behaviors.flies.FlyRocketPowered;
 import ru.zenicko.patterns.strategy.behaviors.quackes.Quack;
 
