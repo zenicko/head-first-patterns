@@ -1,6 +1,7 @@
 package ru.zenicko.patterns.observer;
 
 import ru.zenicko.patterns.observer.displays.CurrentConditionsDisplay;
+import ru.zenicko.patterns.observer.displays.ForecastDisplay;
 import ru.zenicko.patterns.observer.weatherstations.MoscowWeatherStation;
 
 public class AppWeatherORama {
@@ -8,11 +9,13 @@ public class AppWeatherORama {
         WeatherData weatherData = new WeatherData();
         MoscowWeatherStation moscowWeatherStation = new MoscowWeatherStation();
 
-
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
+        ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+
         weatherData.setMeasurements(moscowWeatherStation);
         weatherData.setMeasurements(moscowWeatherStation);
         weatherData.setMeasurements(moscowWeatherStation);
         weatherData.setMeasurements(moscowWeatherStation);
+
     }
 }

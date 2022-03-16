@@ -18,8 +18,13 @@ It was like a thunderbolt) A super type is cool!
 **All the varies must be exluded - “encapsulated”.**
 
 ### Pattern 2 OBSERVER
+If you need to update some objects (OBSERVERS) after when the SUBJECT has updated, **use the Observer Pattern.**
+Is it clearly? Not, ok! See Chapter 2 The book. 
 
--a 
+The v0.2.0b1 The Observer is got updated parameters.
+The v0.2.1 The Observer get updated parameters itself.
+
+
 
 
 
