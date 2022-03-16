@@ -17,6 +17,9 @@ It was like a thunderbolt) A super type is cool!
 
 **All the varies must be exluded - “encapsulated”.**
 
+### Pattern 2 OBSERVER
+
+-a 
 
 
 

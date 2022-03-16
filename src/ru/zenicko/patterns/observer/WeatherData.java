@@ -1,42 +1,43 @@
 package ru.zenicko.patterns.observer;
 
-import ru.zenicko.patterns.observer.utils.Humidity;
-import ru.zenicko.patterns.observer.utils.Pressure;
-import ru.zenicko.patterns.observer.utils.Temperature;
+import ru.zenicko.patterns.observer.observers.Observer;
+import ru.zenicko.patterns.observer.weatherstations.WeatherStation;
 
-import java.util.Random;
+import java.util.ArrayList;
 
-public class WeatherData {
+public class WeatherData implements Subject {
+    private ArrayList<Observer> observers;
+    private float temp;
+    private float humidity;
+    private float pressure;
 
-    float getTemperature() {
-        final int MAX = Temperature.MaxTemperature.getTemperature();
-        final int MIN = Temperature.MinTemperature.getTemperature();
-
-        return MIN + (new Random().nextFloat() * (MAX - MIN);
+    WeatherData() {
+        observers = new ArrayList<Observer>();
     }
 
-    float getHumidity() {
-        final int MAX = Humidity.MaxHumidity.getHumidity();
-        final int MIN = Humidity.MinHumidity.getHumidity();
-
-        return MIN + new Random().nextFloat() * (MAX - MIN);
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
     }
 
-    float getPressure() {
-        final int MAX = Pressure.MaxPressure.getPressure();
-        final int MIN = Pressure.MinPressure.getPressure();
-
-        return MIN + new Random().nextFloat() * (MAX - MIN);
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
     }
+
+    public void notifyObserver() {
+        for (Observer observer: observers) {
+            observer.update(temp, humidity, pressure);
+        }
+    }
+
     public void measurementsChanged() {
-        float temp = getTemperature();
-        float humidity = getHumidity();
-        float pressure = getPressure();
+        notifyObserver();
+    }
 
-        currentConditionsDisplay.update(temp, humidity, pressure);
-        statisticsDisplay.update(temp, humidity, pressure);
-        forecastDisplay.update(temp, humidity, pressure);
-
+    public void setMeasurements(WeatherStation weatherStation) {
+       this.temp = weatherStation.getTemperature();
+       this.humidity = weatherStation.getHumidity();
+       this.pressure = weatherStation.getPressure();
+       measurementsChanged();
     }
 
 }
